@@ -44,7 +44,7 @@ metadata: demo-metadata
 # [optional: only used if you need to tweak CB defaults or generate from more than one data file]
 page_gen:
   - data: 'demo-metadata'
-    template: 'item'
+    template: 'print'
     name: 'objectid'
     dir: 'items'
     extension: 'html' 
