@@ -43,7 +43,7 @@ metadata: demo-metadata
 # page generation settings [optional!]
 # [optional: only used if you need to tweak CB defaults or generate from more than one data file]
 page_gen:
-  - data: 'demo-metadata'
+  - data: 'ihl_demo_metadata'
     template: 'print'
     name: 'objectid'
     dir: 'items'
