@@ -39,7 +39,7 @@ organization-logo-nav: https://jsma.uoregon.edu/sites/all/themes/responsive/logo
 # COLLECTION SETTINGS
 #
 # choose metadata: this is the name of the csv file in your _data directory that describes the objects in your collection
-metadata: demo-metadata
+metadata: ihl_demo_metadata
 # page generation settings [optional!]
 # [optional: only used if you need to tweak CB defaults or generate from more than one data file]
 page_gen:
@@ -51,7 +51,7 @@ page_gen:
     filter: 'objectid' 
   - data: 'myjapanesehanga_artist_index'
     template: 'artist'
-    name: 'artistid'
+    name: 'objectid'
     dir: 'artists'
     extension: 'html' 
 

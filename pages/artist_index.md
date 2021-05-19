@@ -10,6 +10,6 @@ List of artists represented in the collection.
 
 Artist Listing (family name precedes given name)
 
-{% assign artists = myjapanesehanga_artist_index %}
+{% assign artists = site.data.myjapanesehanga_artist_index %}
 {% for a in artists %}
 - [{{ a.title }}]({{ '/artists/' | append: a.objectid | append: ".html" | relative_url }}) ({{ a.date }}){% endfor %}

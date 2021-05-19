@@ -1,0 +1,54 @@
+---
+layout: default
+item-meta: true
+gallery: true
+---
+{% comment %} find print detail images from images table {% endcomment %}
+{% assign print_images = site.data.ihl_demo_images | where: 'printid',page.objectid %}
+
+<div class="container py-3">
+
+    {% include item/breadcrumbs.html %}
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4 text-center">
+
+                {% include item/item-thumb.html %}
+                
+                <div class="my-2">
+
+                    <a href="{{ '/artists/' | append: page.artistid | append: '.html' | relative_url }}" class="btn btn-outline-info">View Artist Page</a>
+
+                    <a target="_blank" rel="noopener" href="{{ page.object_download | relative_url }}" class="btn btn-outline-info">Download {{ page.format | split: '/' | last | upcase }}</a>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-6">
+
+            {% include item/metadata.html %}
+            
+        </div>
+        
+    </div>
+    <div class="border border-rounded p-4 my-4">
+        <h2>Print Details</h2>
+
+        <div id="lightgallery" class="row justify-content-center">
+            {% for p in print_images %}
+            <div class="col-6 gallery-img" data-src="{{ p.img_src }}">
+                <img src="{{ p.img_src }}" alt="detail for {{ page.title | escape }}" class="img-fluid p-3">
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    {%- if site.data.theme.browse-buttons == true -%}
+        {% include item/browse-buttons.html %}
+    {%- endif -%}
+</div>
