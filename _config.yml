@@ -49,7 +49,7 @@ page_gen:
     dir: 'items'
     extension: 'html' 
     filter: 'objectid' 
-  - data: 'artist-metadata'
+  - data: 'myjapanesehanga_artist_index'
     template: 'artist'
     name: 'artistid'
     dir: 'artists'
